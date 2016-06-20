@@ -1,0 +1,23 @@
+{
+  "name": "Arc en Cercles",
+  "main": "index.html",
+  "version": "1.0.0",
+  "description": "Game about making combinations.",
+  "author": "erdnaxe",
+  "license": "MIT",
+  "window": {
+    "frame": true,
+    "transparent": false,
+    "width": 1080,
+    "height": 720,
+    "min_width": 550,
+    "min_height": 550
+  },
+  "scripts": {
+    "test": "nw ."
+  },
+  "dependencies": {
+    "font-awesome": "^4.6.3",
+    "normalize.css": "^4.1.1"
+  }
+}

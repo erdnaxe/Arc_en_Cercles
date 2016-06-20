@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arc en Cercles - Niveau 1</title>
+	 <meta charset="UTF-8">
+	 <link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
+	 <link href='node_modules/normalize.css/normalize.css' rel='stylesheet' type='text/css'>
+	 <link href='node_modules/font-awesome/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+	 <link href='layout.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="container">
+			<div class="canvas-container">
+				<canvas id="boardCanvas" width="512" height="512"></canvas>
+			</div>
+			<p class="status">
+				Tour <span id="turn">?</span> sur <span id="turnTotal">?</span>
+				&mdash; Score de <span id="score">?</span>
+				&mdash; <a href="#" onclick="game.newGame()" title="Nouvelle partie"><i class="fa fa-refresh" aria-hidden="true"></i></a>
+				&mdash; <a href="#" onclick="aboutWindow()" title="À propos"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+				&mdash; Niveau <span id="level">?</span>
+				<a href="#" onclick="game.increaseLevel()" title="Monter le niveau"><i class="fa fa-level-up" aria-hidden="true"></i></a>
+				<a href="#" onclick="game.decreaseLevel()" title="Baisser le niveau"><i class="fa fa-level-down" aria-hidden="true"></i></a>
+			<p>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="scripts/Graphic.js"></script>
+	<script type="text/javascript" src="scripts/Game.js"></script>
+	<script>
+	var game = new Game();
+	game.newGame(); 
+	</script>
+	<script type="text/javascript" src="scripts/Window.js"></script>
+</body>
+</html>

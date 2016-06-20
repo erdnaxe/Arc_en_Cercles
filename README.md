@@ -1,2 +1,2 @@
-# Arc_en_Cercles
+# Arc en Cercles
 Reflexion game about bubbles.
