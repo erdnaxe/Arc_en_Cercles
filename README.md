@@ -2,6 +2,8 @@
 
 Arc en Cercles is a Open-Source game. It can run in a web browser or in a NW.js windows (Windows, Mac and Linux).
 
+Actually, it's in alpha because some algo parts need to be written.
+
 ![alt tag](https://raw.githubusercontent.com/erdnaxe/Arc_en_Cercles/master/docs/demo.png)
 
 It's build with [NW.js](http://nwjs.io/) (optional) and [NPM](https://www.npmjs.com/).
