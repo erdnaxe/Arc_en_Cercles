@@ -2,11 +2,16 @@
 <html>
 <head>
 	<title>Arc en Cercles - Niveau 1</title>
-	 <meta charset="UTF-8">
-	 <link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
-	 <link href='node_modules/normalize.css/normalize.css' rel='stylesheet' type='text/css'>
-	 <link href='node_modules/font-awesome/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
-	 <link href='layout.css' rel='stylesheet' type='text/css'>
+
+	<meta charset="UTF-8">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet" type="text/css">
+	<link href="node_modules/normalize.css/normalize.css" rel="stylesheet" type="text/css">
+	<link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="public/css/layout.css" rel="stylesheet" type="text/css">
+
+	<link rel="icon" href="public/ico/favicon.ico" type="image/x-icon"/>
+	<link rel="shortcut icon" type="image/png" href="public/ico/favicon.png"/>
 </head>
 <body>
 	<div class="wrapper">
@@ -26,12 +31,14 @@
 		</div>
 	</div>
 
-	<script type="text/javascript" src="scripts/Graphic.js"></script>
-	<script type="text/javascript" src="scripts/Game.js"></script>
+	<script type="text/javascript" src="public/js/Graphic.js"></script>
+	<script type="text/javascript" src="public/js/Game.js"></script>
 	<script>
 	var game = new Game();
 	game.newGame(); 
 	</script>
-	<script type="text/javascript" src="scripts/Window.js"></script>
+
+	<!-- NW.js compatibility -->
+	<script type="text/javascript" src="public/js/Window.js"></script>
 </body>
 </html>
