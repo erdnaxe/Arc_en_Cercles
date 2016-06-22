@@ -6,8 +6,6 @@ Actually, it's in alpha because some algo parts need to be written.
 
 ![alt tag](https://raw.githubusercontent.com/erdnaxe/Arc_en_Cercles/master/docs/demo.png)
 
-It use [Font Awesome](http://fontawesome.io/) and [Normalize.css](https://necolas.github.io/normalize.css/).
-
 ## Features
 
 - Different level of difficulty.

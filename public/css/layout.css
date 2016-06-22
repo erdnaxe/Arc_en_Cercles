@@ -5,10 +5,15 @@ body {
 	background-color: #212121;
 }
 
-.status {
-	text-align: center;
+h1 {
+	font-weight: 200;
 }
 
+h1 img {
+	width: 2em;
+}
+
+/*
 .wrapper {
    display: table;
    padding: 0;
@@ -31,15 +36,4 @@ body {
    border-style: solid;
    border-color: #000000;
 }
-
-span {
-	font-weight: 500;
-}
-
-a, a:visited {
-	color: #FFFFFF;
-}
-
-a:hover {
-	color: #EEEEEE;
-}
+*/

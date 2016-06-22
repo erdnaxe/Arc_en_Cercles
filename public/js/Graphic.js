@@ -28,8 +28,8 @@ function Graphic () {
 		}
 	}
 
-	this.drawCircle = function(pos, selected) {
-		var color = getColor(table[ pos[0] ][ pos[1] ]);
+	this.drawCircle = function(pos, selected, ref) {
+		var color = getColor(ref);
 
 		x = 32*pos[0];
 		y = 32*pos[1];

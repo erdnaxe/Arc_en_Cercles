@@ -5,32 +5,45 @@
 
 	<meta charset="UTF-8">
 
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet" type="text/css">
-	<link href="node_modules/normalize.css/normalize.css" rel="stylesheet" type="text/css">
-	<link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:200,400" rel="stylesheet" type="text/css">
+	<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 	<link href="public/css/layout.css" rel="stylesheet" type="text/css">
 
 	<link rel="icon" href="public/ico/favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" type="image/png" href="public/ico/favicon.png"/>
 </head>
 <body>
-	<div class="wrapper">
-		<div class="container">
-			<div class="canvas-container">
-				<canvas id="boardCanvas" width="512" height="512"></canvas>
+	<div class="container">
+		<h1><img src="public/img/logo.png" alt="" /> Arc en Cercles</h1>
+		<div class="canvas-container">
+			<canvas id="boardCanvas" width="512" height="512"></canvas>
+		</div>
+		<div class="btn-toolbar" role="toolbar">
+			<div class="btn-group btn-group-sm">
+				<span class="btn btn-default disabled">Tour <span id="turn">?</span> sur <span id="turnTotal">?</span></span>
+				<span class="btn btn-default disabled">Score de <span id="score">?</span></span>
 			</div>
-			<p class="status">
-				Tour <span id="turn">?</span> sur <span id="turnTotal">?</span>
-				&mdash; Score de <span id="score">?</span>
-				&mdash; <a href="#" onclick="game.newGame()" title="Nouvelle partie"><i class="fa fa-refresh" aria-hidden="true"></i></a>
-				&mdash; <a href="#" onclick="aboutWindow()" title="À propos"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
-				&mdash; Niveau <span id="level">?</span>
-				<a href="#" onclick="game.increaseLevel()" title="Monter le niveau"><i class="fa fa-level-up" aria-hidden="true"></i></a>
-				<a href="#" onclick="game.decreaseLevel()" title="Baisser le niveau"><i class="fa fa-level-down" aria-hidden="true"></i></a>
-			<p>
+			<div class="btn-group btn-group-sm">
+				<a class="btn btn-default" href="#" onclick="game.newGame()" title="Nouvelle partie"><span class="glyphicon glyphicon-retweet" aria-hidden="true"></span></a>
+				<div class="btn-group btn-group-sm" role="group">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Niveau <span id="level">?</span>
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li><a href="#" onclick="game.increaseLevel()">Monter le niveau</a></li>
+						<li><a href="#" onclick="game.decreaseLevel()">Baisser le niveau</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="btn-group btn-group-sm">
+				<a class="btn btn-success" href="#" onclick="aboutWindow()" title="À propos"><span class="glyphicon glyphicon-book" aria-hidden="true"></span></a>
+			</div>
 		</div>
 	</div>
 
+	<script type="text/javascript" src="node_modules/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="public/js/Graphic.js"></script>
 	<script type="text/javascript" src="public/js/Game.js"></script>
 	<script>
