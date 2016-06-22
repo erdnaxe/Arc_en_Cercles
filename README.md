@@ -6,8 +6,6 @@ Actually, it's in alpha because some algo parts need to be written.
 
 ![alt tag](https://raw.githubusercontent.com/erdnaxe/Arc_en_Cercles/master/docs/demo.png)
 
-It's build with [NW.js](http://nwjs.io/) (optional) and [NPM](https://www.npmjs.com/).
-
 It use [Font Awesome](http://fontawesome.io/) and [Normalize.css](https://necolas.github.io/normalize.css/).
 
 ## Features
@@ -21,6 +19,14 @@ And much more!
 - Windows
 - Mac
 - Linux
+
+## How to build
+
+You will need [NW.js](http://nwjs.io/) (optional) and [NPM](https://www.npmjs.com/).
+
+* Clone the project, go to the project directory.
+* Ask NPM to download all vendors : `npm install`
+* Build and launch the app with NW.js : `nw .` or open **index.html** in a web browser.
 
 ## Author
 
