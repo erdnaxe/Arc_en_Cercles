@@ -19,12 +19,5 @@
     "min_width": 720,
     "min_height": 405,
     "single-instance": true
-  },
-  "scripts": {
-    "test": "nw ."
-  },
-  "dependencies": {
-    "bootstrap": "^3.3.6",
-    "jquery": "1.9.1"
   }
 }

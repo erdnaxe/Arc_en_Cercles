@@ -2,38 +2,71 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 	color: #FFFFFF;
-	background-color: #212121;
+	background-color: #000000;
 }
 
+.vertical-center {
+	min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+	min-height: 100vh; /* These two lines are counted as one :-)       */
+
+	display: flex;
+	align-items: center;
+}
+
+/* Title */
 h1 {
-	font-weight: 200;
+	font-size: 42px;
+	font-weight: 100;
 }
 
 h1 img {
-	width: 2em;
+	width: 1.2em;
 }
 
-/*
-.wrapper {
-   display: table;
-   padding: 0;
-   width: 100%;
-   height: 100%;
-   position: absolute;
+/* Toolbar */
+.btn.notclickable, .btn.notclickable:hover, .btn.notclickable:active {
+	background-color: #fff;
+	border-color: rgb(204, 204, 204);
+	cursor: default;
+	box-shadow: none;
 }
 
-.container {
-   display: table-cell;
-   vertical-align: middle;
+/* Panels color */
+.panel-game, .panel-score, .panel-tune {
+	background-color: #151515;
 }
 
-.canvas-container {
-   position: relative;
-   width: 512px;
-   height: 512px;
-   margin: 0 auto;
-   border-width: 1px;
-   border-style: solid;
-   border-color: #000000;
+.panel-game {
+	border-color: #2a9fd6;
+	margin-bottom: 10px;
 }
-*/
+
+.panel-game .panel-footer {
+	background-color: #2a9fd6;
+	border-top: 0;
+	padding: 5px 10px;
+}
+
+.panel-score {
+	border-color: #5dd712;
+}
+
+.panel-score .panel-heading {
+	background-color: #94d76c;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.panel-score .best {
+	background-color: #152815;
+}
+
+.panel-tune {
+	border-color: #c308af;
+}
+
+.panel-tune .panel-heading {
+	background-color: #c308af;
+	font-size: 20px;
+	font-weight: 600;
+}

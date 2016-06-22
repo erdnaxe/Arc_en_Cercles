@@ -20,10 +20,9 @@ And much more!
 
 ## How to build
 
-You will need [NW.js](http://nwjs.io/) (optional) and [NPM](https://www.npmjs.com/).
+You can use [NW.js](http://nwjs.io/) to build a native app.
 
 * Clone the project, go to the project directory.
-* Ask NPM to download all vendors : `npm install`
 * Build and launch the app with NW.js : `nw .` or open **index.html** in a web browser.
 
 ## Author

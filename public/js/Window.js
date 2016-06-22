@@ -63,4 +63,10 @@ if (typeof nw !== 'undefined') {
 
 	// Show the menu !
 	nw.Window.get().menu = menubar;
+	
+	// Open links in external browser
+	$('a[target=_blank]').on('click', function(){
+		require('nw.gui').Shell.openExternal( this.href );
+		return false;
+	});
 }
