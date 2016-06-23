@@ -17,6 +17,7 @@ And much more!
 - Windows
 - Mac
 - Linux
+- Window Phone, Android and IOS
 
 ## How to build
 
