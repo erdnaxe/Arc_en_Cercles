@@ -1,11 +1,6 @@
 /*
- * Window part
+ * For NW.js compatibility
  */
-
-function aboutWindow() {
-	alert('About this games... I can say something is coming here, maybe ?');
-	console.log('About windows');
-}
 
 /*
  * MenuBar

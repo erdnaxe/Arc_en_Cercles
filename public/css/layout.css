@@ -1,27 +1,18 @@
-body {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 400;
-	color: #FFFFFF;
-	background-color: #000000;
-}
-
+/* Center the game */
 .vertical-center {
-	min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-	min-height: 100vh; /* These two lines are counted as one :-)       */
+	/* Fallback for browsers do NOT support vh unit */
+	min-height: 100%; 
+	min-height: 100vh;
 
 	display: flex;
 	align-items: center;
 }
 
 /* Title */
-h1 {
-	font-size: 42px;
-	font-weight: 100;
-}
+.logo { width: 1.2em; }
 
-h1 img {
-	width: 1.2em;
-}
+/* Constant cursor */
+h1, .panel, p, .modal-header { cursor: default; }
 
 /* Toolbar */
 .btn.notclickable, .btn.notclickable:hover, .btn.notclickable:active {
@@ -31,42 +22,12 @@ h1 img {
 	box-shadow: none;
 }
 
-/* Panels color */
-.panel-game, .panel-score, .panel-tune {
-	background-color: #151515;
-}
-
-.panel-game {
-	border-color: #2a9fd6;
+/* Panels */
+.panel {
+	color: #FFFFFF;
 	margin-bottom: 10px;
 }
-
-.panel-game .panel-footer {
-	background-color: #2a9fd6;
-	border-top: 0;
-	padding: 5px 10px;
-}
-
-.panel-score {
-	border-color: #5dd712;
-}
-
-.panel-score .panel-heading {
-	background-color: #94d76c;
-	font-size: 20px;
-	font-weight: 600;
-}
-
-.panel-score .best {
-	background-color: #152815;
-}
-
-.panel-tune {
-	border-color: #c308af;
-}
-
-.panel-tune .panel-heading {
-	background-color: #c308af;
-	font-size: 20px;
+.panel-heading {
+	font-size: 16px;
 	font-weight: 600;
 }

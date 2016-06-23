@@ -22,13 +22,31 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+	<!-- howToPlay Modal -->
+	<div class="modal fade" id="howToPlayModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">How to play ?</h4>
+				</div>
+				<div class="modal-body">
+					Coming soon...
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">I'm ok, let's play !</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div class="vertical-center">
 		<div class="container text-center">
-			<h1><img src="public/img/logo.png" alt="" /> Arc en Cercles <small><span class="label label-warning">beta</span></small></h1>
+			<h1><img class="logo" src="public/img/logo.png" alt="" /> Arc en Cercles <small><span class="label label-warning">beta</span></small></h1>
 
 			<div class="row">
 				<div class="col-md-8">
-					<div class="panel panel-game">
+					<div class="panel panel-primary">
 						<div class="panel-body">
 							<canvas id="boardCanvas" width="512" height="512"></canvas>
 						</div>
@@ -38,21 +56,24 @@
 									<span class="btn btn-default notclickable">Tour <span id="turn">?</span> sur <span id="turnTotal">?</span></span>
 									<span class="btn btn-default notclickable">Score de <span id="score">?</span></span>
 								</div>
-								<div class="btn-group btn-group-sm">
-									<a class="btn btn-default" href="#" onclick="game.newGame()" title="Nouvelle partie"><span class="glyphicon glyphicon-retweet" aria-hidden="true"></span></a>
+								<div class="btn-group btn-group-sm pull-right">
+									<a class="btn btn-warning" href="#" onclick="game.newGame()" title="Nouvelle partie"><span class="glyphicon glyphicon-retweet" aria-hidden="true"></span></a>
 									<div class="btn-group btn-group-sm dropup" role="group">
 										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 											Niveau <span id="level">?</span>
 											<span class="caret"></span>
 										</button>
 										<ul class="dropdown-menu dropdown-menu-right">
-											<li><a href="#" onclick="game.increaseLevel()">Monter le niveau</a></li>
-											<li><a href="#" onclick="game.decreaseLevel()">Baisser le niveau</a></li>
+											<li><a href="#" onclick="game.increaseLevel()">Increase level</a></li>
+											<li><a href="#" onclick="game.decreaseLevel()">Decrease level</a></li>
 										</ul>
 									</div>
 								</div>
 								<div class="btn-group btn-group-sm">
-									<a class="btn btn-success" href="#" onclick="aboutWindow()" title="À propos"><span class="glyphicon glyphicon-book" aria-hidden="true"></span></a>
+									<a class="btn btn-success" href="#" data-toggle="modal" data-target="#howToPlayModal" title="How to play">
+										<span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+										How to play
+									</a>
 								</div>
 							</div>
 						</div>
@@ -60,7 +81,7 @@
 				</div>
 
 				<div class="col-md-4">
-					<div class="panel panel-score">
+					<div class="panel panel-success">
 						<div class="panel-heading">Best players of the week</div>
 						<table class="table table-condensed text-left">
 							<tr class="best"><th scope="row">1</th><td>BigBoss</td></tr>
@@ -68,9 +89,27 @@
 							<tr><th scope="row">3</th><td>Coming soon...</td></tr>
 						</table>
 					</div>
-					<div class="panel panel-tune">
+					<div class="panel panel-info">
 						<div class="panel-heading">Tune the game</div>
-						<div class="panel-body">Coming soon...</div>
+						<div class="panel-body text-left">
+							<dl>
+								<dt>Détection des cases adjacentes</dt>
+								<dd>
+									<div class="radio">
+										<label>
+											<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+											Détection linéaire
+										</label>
+									</div>
+									<div class="radio">
+										<label>
+											<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+											Détection non linéaire
+										</label>
+									</div>
+								</dd>
+							</dl>
+						</div>
 					</div>
 					<p>Developed by <kbd>erdnaxe</kbd> &mdash; <a href="https://github.com/erdnaxe/Arc_en_Cercles/issues" target="_blank">Report an issue</a></p>
 				</div>
@@ -80,7 +119,7 @@
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="public/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-	<script type="text/javascript" src="public/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="public/js/vendor/bootstrap.min.js"></script>
 
 	<script type="text/javascript" src="public/js/Graphic.js"></script>
 	<script type="text/javascript" src="public/js/Game.js"></script>
