@@ -256,12 +256,12 @@
     "@modal-inner-padding": "15px",
     "@modal-title-padding": "15px",
     "@modal-title-line-height": "@line-height-base",
-    "@modal-content-bg": "#fff",
+    "@modal-content-bg": "#151515",
     "@modal-content-border-color": "rgba(0,0,0,.2)",
-    "@modal-content-fallback-border-color": "#999",
+    "@modal-content-fallback-border-color": "#000",
     "@modal-backdrop-bg": "#000",
     "@modal-backdrop-opacity": ".5",
-    "@modal-header-border-color": "#e5e5e5",
+    "@modal-header-border-color": "#000",
     "@modal-footer-border-color": "@modal-header-border-color",
     "@modal-lg": "900px",
     "@modal-md": "600px",
@@ -415,5 +415,5 @@
     "tab.js",
     "transition.js"
   ],
-  "customizerUrl": "https://getbootstrap.com/customize/?id=aab0c7663d7611a518763e81cd7adba5"
+  "customizerUrl": "https://getbootstrap.com/customize/?id=db9387f58d64d5bf383f907ab3ed18f5"
 }

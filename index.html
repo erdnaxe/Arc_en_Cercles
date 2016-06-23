@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Arc en Cercles - Chargement</title>
+	<title>Arc en Cercles - Loading</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -53,14 +53,14 @@
 						<div class="panel-footer">
 							<div class="btn-toolbar " role="toolbar">
 								<div class="btn-group btn-group-sm">
-									<span class="btn btn-default notclickable">Tour <span id="turn">?</span> sur <span id="turnTotal">?</span></span>
-									<span class="btn btn-default notclickable">Score de <span id="score">?</span></span>
+									<span class="btn btn-default notclickable">Turn <span id="turn">?</span> of <span id="turnTotal">?</span></span>
+									<span class="btn btn-default notclickable">Score of <span id="score">?</span></span>
 								</div>
 								<div class="btn-group btn-group-sm pull-right">
 									<a class="btn btn-warning" href="#" onclick="game.newGame()" title="Nouvelle partie"><span class="glyphicon glyphicon-retweet" aria-hidden="true"></span></a>
 									<div class="btn-group btn-group-sm dropup" role="group">
 										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											Niveau <span id="level">?</span>
+											Level <span id="level">?</span>
 											<span class="caret"></span>
 										</button>
 										<ul class="dropdown-menu dropdown-menu-right">
@@ -91,20 +91,20 @@
 					</div>
 					<div class="panel panel-info">
 						<div class="panel-heading">Tune the game</div>
-						<div class="panel-body text-left">
+						<div class="panel-body">
 							<dl>
-								<dt>Détection des cases adjacentes</dt>
+								<dt class="text-left">Adjacent circle algorithm</dt>
 								<dd>
-									<div class="radio">
+									<div class="radio-inline">
 										<label>
 											<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-											Détection linéaire
+											Linear
 										</label>
 									</div>
-									<div class="radio">
+									<div class="radio-inline">
 										<label>
 											<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-											Détection non linéaire
+											Zigzag
 										</label>
 									</div>
 								</dd>

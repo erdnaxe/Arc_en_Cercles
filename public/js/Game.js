@@ -88,28 +88,24 @@ function Game () {
 		this.populateTable();
 	}
 
-	var test = function(pos) {
-		// Get the reference color
-		var ref = getColorRef(pos);
-		console.log('Testing case ', pos, ' with color ', ref);
+	this.test = function() {
+		do {
+			// Explore the table to remove combinations
+			var points_get = 0;  // Points in one exploration
 
-		// Explore to the right
-		var x = pos[0];
-		while (getColorRef([x, pos[1]]) == ref) {
-			console.log('Same color: ', [x, pos[1]]);
-			//TODO
+			// For each case of the table do
+			var ref = null;
+			for (var i=0; i<16; i++) {
+				for (var j=15; j>=0; j--) {
+					ref = getColorRef([i, j]);
+					
+					//setCircle([i, j], ent);
+				}
+			}
 
-			x++;
-		}
-
-		// Explore downward
-		var y = pos[1];
-		while (getColorRef([pos[0], y]) == ref) {
-			console.log('Same color: ', [pos[0], y]);
-			//TODO
-
-			y++;
-		}
+			// Add to the score
+			score += points_get;
+		} while (points_get);  // If something was destroyed, then re-execute the algo
 	}
 
 	this.setSelected = function(pos) {
@@ -144,9 +140,8 @@ function Game () {
 				setCircle(circle_1, getColorRef(circle_2));
 				setCircle(circle_2, color_1);
 				
-				// Execute algo on the two circles
-				test(circle_1);
-				test(circle_2);
+				// Execute algo
+				this.test();
 			}
 
 			// Refresh info & draw circles

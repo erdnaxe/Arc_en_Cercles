@@ -21,8 +21,8 @@ if (typeof nw !== 'undefined') {
 		click: function(){ game.newGame() }
 	}));
 	game_submenu.append(new nw.MenuItem({
-		label: 'À propos',
-		click: aboutWindow
+		label: 'Comment jouer',
+		click: function(){ $('#howToPlayModal').modal() }
 	}));
 	game_submenu.append(new nw.MenuItem({
 		label: 'Quitter',
