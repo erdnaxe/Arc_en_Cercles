@@ -64,8 +64,10 @@
 											<span class="caret"></span>
 										</button>
 										<ul class="dropdown-menu dropdown-menu-right">
-											<li><a href="#" onclick="game.increaseLevel()">Increase level</a></li>
-											<li><a href="#" onclick="game.decreaseLevel()">Decrease level</a></li>
+											<li><a href="#" onclick="game.setLevel(1)">Niveau facile</a></li>
+											<li><a href="#" onclick="game.setLevel(2)">Niveau intermédière</a></li>
+											<li><a href="#" onclick="game.setLevel(3)">Niveau difficile</a></li>
+											<li><a href="#" onclick="game.setLevel(4)">Niveau impossible</a></li>
 										</ul>
 									</div>
 								</div>
@@ -93,7 +95,7 @@
 						<div class="panel-heading">Tune the game</div>
 						<div class="panel-body">
 							<dl>
-								<dt class="text-left">Adjacent circle algorithm</dt>
+								<dt class="text-left">Adjacent circle algorithm:</dt>
 								<dd>
 									<div class="radio-inline">
 										<label>
@@ -122,6 +124,7 @@
 	<script type="text/javascript" src="public/js/vendor/bootstrap.min.js"></script>
 
 	<script type="text/javascript" src="public/js/Graphic.js"></script>
+	<script type="text/javascript" src="public/js/Table.js"></script>
 	<script type="text/javascript" src="public/js/Game.js"></script>
 	<script>
 	var game = new Game();
