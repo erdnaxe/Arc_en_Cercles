@@ -57,7 +57,7 @@
 									<span class="btn btn-default notclickable">Score of <span id="score">?</span></span>
 								</div>
 								<div class="btn-group btn-group-sm pull-right">
-									<a class="btn btn-warning" href="#" onclick="game.newGame()" title="Nouvelle partie"><span class="glyphicon glyphicon-retweet" aria-hidden="true"></span></a>
+									<a class="btn btn-warning" href="#" onclick="game.reset()" title="Nouvelle partie"><span class="glyphicon glyphicon-retweet" aria-hidden="true"></span></a>
 									<div class="btn-group btn-group-sm dropup" role="group">
 										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 											Level <span id="level">?</span>
@@ -124,11 +124,11 @@
 	<script type="text/javascript" src="public/js/vendor/bootstrap.min.js"></script>
 
 	<script type="text/javascript" src="public/js/Graphic.js"></script>
+	<script type="text/javascript" src="public/js/Infos.js"></script>
 	<script type="text/javascript" src="public/js/Table.js"></script>
 	<script type="text/javascript" src="public/js/Game.js"></script>
 	<script>
 	var game = new Game();
-	game.newGame(); 
 	</script>
 
 	<!-- NW.js compatibility -->

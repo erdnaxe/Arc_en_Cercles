@@ -5,11 +5,10 @@ function Game () {
 	turn = 1;
 	turn_max = 20; 
 	level = 1;
-	level_max = 4;
 	score = 0;
 
-	graphic = new Graphic();
 	table = new Table();
+	infos = new Infos();
 
 	this.getLevel = function() {
 		return level;
@@ -18,17 +17,34 @@ function Game () {
 	this.setLevel = function(lv) {
 		// Set the level then launch a new game
 		level = lv;
-		this.newGame();
+
+		// Change amount of colors
+		table.setAmountColors(4+lv);
+
+		this.reset();
 	};
 
-	this.newGame = function() {
+	this.reset = function() {
 		// Reset turn & score
 		turn = 1;
 		score = 0;
-		graphic.refreshInfo(turn, turn_max, score, level);
+		infos.setTurn(1);
+		infos.setTurnTotal(turn_max);
+		infos.setScore(0);
+		infos.setLevel(level);
 
 		// Reset table
 		table.reset();
+	}
+	
+	this.incrementTurn = function() {
+		turn ++;
+		infos.setTurn(turn);
+	}
+	
+	this.addToScore = function(i) {
+		score += i;
+		infos.setScore(score);
 	}
 
 	this.mouseClick = function(pos) {
@@ -37,17 +53,14 @@ function Game () {
 
 		// Increment the turn only if new points
 		if (points_gained) {
-			score += points_gained;
-			turn ++;
+			this.addToScore(points_gained);
+			this.incrementTurn();
 		}
 
 		// Check if it's the end
 		if (turn > turn_max) {
-			this.newGame();
+			this.reset();
 		}
-
-		// Refresh infos
-		graphic.refreshInfo(turn, turn_max, score, level);
 	}
 
 	graphic.canvas.addEventListener('mousedown', function(e) {
@@ -57,6 +70,8 @@ function Game () {
 
 		game.mouseClick([x, y]);
 	});
+
+	this.reset();
 }
 
 

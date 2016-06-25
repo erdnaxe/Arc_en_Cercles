@@ -10,7 +10,11 @@ function Table () {
 	selected_2 = false;
 
 	// Number of colors
-	color_max = 5;  // Number of colors
+	amount_colors_max = 8;  // Number of colors
+	amount_colors = 4;
+
+	// Canvas
+	graphic = new Graphic();
 
 	this.reset = function(pos) {
 		// Clear selection
@@ -22,6 +26,13 @@ function Table () {
 		table.test();
 	}
 
+	this.setAmountColors = function(n) {
+		// Change the amount of colors in the next game
+		if (n > 1 && n <= amount_colors_max) {
+			amount_colors = n;
+		}
+	}
+	
 	this.getCircle= function(pos) {
 		// Return the integer witch identify the color of the cas at pos
 		return table[pos[0]][pos[1]];
@@ -57,8 +68,8 @@ function Table () {
 		for (var i=0; i<16; i++) {
 			table[i] = [];
 			for (var j=0; j<16; j++) {
-				// Draw a color between 1 and color_max and set the circle color
-				var ent = Math.floor((Math.random() * color_max) + 1);
+				// Draw a color between 1 and amount_colors and set the circle color
+				var ent = Math.floor((Math.random() * amount_colors) + 1);
 				this.setCircle([i, j], ent);
 			}
 		}
@@ -95,8 +106,8 @@ function Table () {
 			for (var i=0; i<16; i++) {
 				for (var j=15; j>=0; j--) {
 					if(this.getCircle([i, j]) == 0) {
-						// Draw a color between 1 and color_max
-						var ent = Math.floor((Math.random() * color_max) + 1);
+						// Draw a color between 1 and amount_colors
+						var ent = Math.floor((Math.random() * amount_colors) + 1);
 
 						// Set the circle
 						this.setCircle([i, j], ent);

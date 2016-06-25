@@ -1,5 +1,5 @@
 /*
- * Graphic part (canvas & info)
+ * Graphic object (canvas)
  */
 function Graphic () {
 	this.canvas = document.getElementById("boardCanvas");
@@ -8,22 +8,31 @@ function Graphic () {
 	var getColor = function(i) {
 		switch (i) {
 			case 1:
-				return 'red';
+				return '#FF1F13';
 				break;
 			case 2:
-				return 'green';
+				return '#FFD713';
 				break;
 			case 3:
-				return 'orange';
+				return '#562AE5';
 				break;
 			case 4:
-				return 'violet';
+				return '#12EC2D';
 				break;
 			case 5:
-				return 'blue';
+				return '#FF9F13';
+				break;
+			case 6:
+				return '#D4FC13';
+				break;
+			case 7:
+				return '#E211E2';
+				break;
+			case 8:
+				return '#2183E2';
 				break;
 			default:
-				return 'black';
+				return '#000000';
 				break;
 		}
 	}
@@ -49,13 +58,5 @@ function Graphic () {
 			context.strokeStyle = 'black';
 		}
 		context.stroke();
-	}
-
-	this.refreshInfo = function(turn, turn_total, score, level) {
-		document.getElementById("turn").innerHTML = turn;
-		document.getElementById("turnTotal").innerHTML = turn_total;
-		document.getElementById("score").innerHTML = score;
-		document.getElementById("level").innerHTML = level;
-		document.title = 'Arc en Cercles - Niveau ' + level;
 	}
 }
