@@ -1,23 +1,21 @@
 {
   "name": "Arc_en_Cercles",
-  "main": "index.html",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "Game about making combinations.",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
+  },
   "author": "erdnaxe",
   "license": "MIT",
   "bug": {
     "url": "https://github.com/erdnaxe/Arc_en_Cercles/issues"
   },
   "repository": "erdnaxe/Arc_en_Cercles",
-  "window": {
-    "title": "Arc en Cercles",
-    "icon": "./favicon.png",
-    "frame": true,
-    "transparent": false,
-    "width": 1080,
-    "height": 720,
-    "min_width": 720,
-    "min_height": 405,
-    "single-instance": true
+  "dependencies": {
+    "express": "^4.10.2",
+    "pug": "^2.0.0-beta3",
+    "socket.io": "^1.4.8"
   }
 }

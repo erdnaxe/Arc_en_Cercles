@@ -59,4 +59,14 @@ function Graphic () {
 		}
 		context.stroke();
 	}
+
+	this.drawTable = function(table) {
+	  // For each case of the table do
+		for (var i=0; i<16; i++) {
+			for (var j=0; j<16; j++) {
+				// Draw a color between 1 and amount_colors and set the circle color
+				this.drawCircle([i, j], false, table[i][j]);
+			}
+		}
+	}
 }
