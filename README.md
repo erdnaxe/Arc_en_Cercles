@@ -1,33 +1,30 @@
 # Arc en Cercles
 
-Arc en Cercles is a Open-Source game. It can run in a web browser or in a NW.js windows (Windows, Mac and Linux).
+Arc en Cercles is a Open-Source game. It uses a server with nodejs and a web browser as a client.
 
-Actually, it's in alpha because some algo parts need to be written.
+Actually, the game is playable but a lot of things is happening in backend to implement a neural-network and a genetic algorithm (yeh !).
 
 ![alt tag](https://raw.githubusercontent.com/erdnaxe/Arc_en_Cercles/master/docs/demo.png)
 
 ## Features
 
+- Server side algorithm: no cheating and scoreboard management.
 - Different level of difficulty.
 
 And much more!
 
-## Supported Platforms
+## How to build and host a server
 
-- Windows
-- Mac
-- Linux
-- Window Phone, Android and IOS
-
-## How to build
-
-You can use [NW.js](http://nwjs.io/) to build a native app.
+You need to have nodejs with npm on your machine.
 
 * Clone the project, go to the project directory.
-* Build and launch the app with NW.js : `nw .` or open **index.html** in a web browser.
+* Download dependencies : `npm install`
+* Launch the server : `npm start`
+* The server will be availiable on `http://localhost:3000/`
 
 ## Author
 
 - [Alexandre IOOSS](https://github.com/erdnaxe)
 
 Original game created for a baccalaureat project (ISN).
+
