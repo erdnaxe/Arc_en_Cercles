@@ -31,16 +31,16 @@ You need to have **NodeJS** with **NPM** on your machine.
 * If you set the game to global in `server/config.json` then you will be able to see the game in realtime in a browser.
 
 The output of the client is a line of text. It's composed of integer like so :
-* 1 int for the **turn** number,
-* 1 int for the **total turn** number,
-* 1 int for the actual **score**,
-* 16*16 int for the **table** (top left first).
+* *1* int for the **turn** number,
+* *1* int for the **total turn** number,
+* *1* int for the actual **score**,
+* *16x16* int for the **table** (top left first).
 
 The input must be 4 integers separated with spaces :
-* 2 int for the coordinates (x, y) of the **first click**,
-* 2 int for the coordinates (x, y) of the **second click**.
+* *2* int for the coordinates (x, y) of the **first click**,
+* *2* int for the coordinates (x, y) of the **second click**.
 
-The coordinates are between 0 and 15 for a grid size of 16.
+The coordinates are between *0* and *15* for a grid size of *16*.
 
 ## Author
 
