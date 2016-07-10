@@ -29,7 +29,7 @@ module.exports = function Table() {
 		}
 	}
 	
-	this.getCircle= function(pos) {
+	this.getCircle = function(pos) {
 		// Return the integer witch identify the color of the cas at pos
 		return this.table[pos[0]][pos[1]];
 	}
