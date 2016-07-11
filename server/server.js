@@ -14,15 +14,12 @@ var sequelize = new Sequelize('sqlite://data.sqlite3');
 app.use(express.static('./public'));  // Static files
 app.set('views', './views');
 app.set('view engine', 'pug');
-app.get('/', function(req, res){ 
-  res.render('index', {});
-});
 app.use(function(req, res, next) {
-  res.status(404).send('Sorry cant find that!');
+  res.render('index', {});
 });
 var serverPort = process.env.PORT || config.port;
 http.listen(serverPort, function() {
-  console.log("Server is listening on port " + serverPort);
+  console.log("Server is listening on port " + serverPort + ', web client on http://localhost:' + serverPort + '/');
 });
 
 // If global game then init game before socket
