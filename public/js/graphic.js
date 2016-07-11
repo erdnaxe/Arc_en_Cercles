@@ -7,33 +7,15 @@ function Graphic () {
 
 	var getColor = function(i) {
 		switch (i) {
-			case 1:
-				return '#FF1F13';
-				break;
-			case 2:
-				return '#FFD713';
-				break;
-			case 3:
-				return '#562AE5';
-				break;
-			case 4:
-				return '#12EC2D';
-				break;
-			case 5:
-				return '#FF9F13';
-				break;
-			case 6:
-				return '#D4FC13';
-				break;
-			case 7:
-				return '#E211E2';
-				break;
-			case 8:
-				return '#2183E2';
-				break;
-			default:
-				return '#000000';
-				break;
+			case 1:	return '#cc0000'; break;
+			case 2: return '#edd400'; break;
+			case 3: return '#73d216'; break;
+			case 4: return '#3465a4'; break;
+			case 5: return '#75507b'; break;
+			case 6: return '#c17d11'; break;
+			case 7: return '#555753'; break;
+			case 8: return '#d3d7cf'; break;
+			default: return '#000000'; break;
 		}
 	}
 

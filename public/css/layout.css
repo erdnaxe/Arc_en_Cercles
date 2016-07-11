@@ -26,5 +26,5 @@ h1, .panel, p, .modal-header { cursor: default; }  /* Constant cursor */
 .panel { margin-bottom: 10px; }
 .panel-heading {
 	font-size: 16px;
-	font-weight: 600;
+	font-weight: 500;
 }
