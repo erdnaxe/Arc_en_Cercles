@@ -4,7 +4,7 @@ var graphic = new Graphic();
 
 var table = []
 
-// send click to the server
+// send events to the server
 graphic.canvas.addEventListener('mousedown', function(e) {
   // When a mouse clicks, select the circle
   var x = Math.floor(e.offsetX/32);
@@ -12,11 +12,9 @@ graphic.canvas.addEventListener('mousedown', function(e) {
 
   socket.emit('click', [x, y]);
 });
-
 $('a#reset').click(function(){
   socket.emit('reset');
 });
-
 $('a#level1').click(function(){
   socket.emit('level', 1);
 });
@@ -42,7 +40,6 @@ socket.on('score', function(i){
 });
 socket.on('level', function(i){
   $('#level').text(i);
-  document.title = 'Arc en Cercles - Niveau ' + i;
 });
 socket.on('selected', function(selected){
   graphic.drawCircle(selected, true, table[selected[0]][selected[1]]);
@@ -50,8 +47,6 @@ socket.on('selected', function(selected){
 socket.on('clear selected', function(){
   graphic.drawTable(table);
 });
-
-// when server change table
 socket.on('table', function(tbl){
   table = tbl
   graphic.drawTable(table);

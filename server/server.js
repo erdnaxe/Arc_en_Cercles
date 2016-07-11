@@ -3,13 +3,13 @@ var i18n = require("i18n");
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
-var Sequelize = require('sequelize');
+var levelup = require('levelup');
 var config = require('./config.json');
 var Game = require('./game.js');
 var Client = require('./client.js');
 
 // Load database
-var sequelize = new Sequelize('sqlite://data.sqlite3');
+var db = levelup('./data')
 
 // Load locales
 i18n.configure({ directory: './locales' });
