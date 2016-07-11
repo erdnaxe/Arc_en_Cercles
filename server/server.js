@@ -1,4 +1,5 @@
 var express = require('express');
+var i18n = require("i18n");
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
@@ -10,12 +11,19 @@ var Client = require('./client.js');
 // Load database
 var sequelize = new Sequelize('sqlite://data.sqlite3');
 
+// Load locales
+i18n.configure({ directory: './locales' });
+
 // Load webserver
+app.use(i18n.init);  // Use browser language
 app.use(express.static('./public'));  // Static files
 app.set('views', './views');
 app.set('view engine', 'pug');
-app.use(function(req, res, next) {
+app.get('/', function(req, res){
   res.render('index', {});
+});
+app.use(function(req, res, next) {
+  res.redirect('/');  // Redirect the user if 404
 });
 var serverPort = process.env.PORT || config.port;
 http.listen(serverPort, function() {

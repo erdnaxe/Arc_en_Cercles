@@ -15,6 +15,7 @@
   "repository": "erdnaxe/Arc_en_Cercles",
   "dependencies": {
     "express": "^4.14.0",
+    "i18n": "^0.8.3",
     "pug": "^2.0.0-beta3",
     "sequelize": "^3.23.4",
     "socket.io": "^1.4.8",
