@@ -6,49 +6,49 @@ var table = []
 
 // send events to the server
 graphic.canvas.addEventListener('mousedown', function(e) {
-  // When a mouse clicks, select the circle
-  var x = Math.floor(e.offsetX/32);
-  var y = Math.floor(e.offsetY/32);
+      // When a mouse clicks, select the circle
+      var x = Math.floor(e.offsetX/32);
+      var y = Math.floor(e.offsetY/32);
 
-  socket.emit('click', [x, y]);
-});
+      socket.emit('click', [x, y]);
+      });
 $('a#reset').click(function(){
-  socket.emit('reset');
-});
+      socket.emit('reset');
+      });
 $('a#level1').click(function(){
-  socket.emit('level', 1);
-});
+      socket.emit('level', 1);
+      });
 $('a#level2').click(function(){
-  socket.emit('level', 2);
-});
+      socket.emit('level', 2);
+      });
 $('a#level3').click(function(){
-  socket.emit('level', 3);
-});
+      socket.emit('level', 3);
+      });
 $('a#level4').click(function(){
-  socket.emit('level', 4);
-});
+      socket.emit('level', 4);
+      });
 
 // when server change infos
 socket.on('turn', function(i){
-  $('#turn').text(i);
-});
+      $('#turn').text(i);
+      });
 socket.on('turn total', function(i){
-  $('#turnTotal').text(i);
-});
+      $('#turnTotal').text(i);
+      });
 socket.on('score', function(i){
-  $('#score').text(i);
-});
+      $('#score').text(i);
+      });
 socket.on('level', function(i){
-  $('#level').text(i);
-});
+      $('#level').text(i);
+      });
 socket.on('selected', function(selected){
-  graphic.drawCircle(selected, true, table[selected[0]][selected[1]]);
-});
+      graphic.drawCircle(selected, true, table[selected[0]][selected[1]]);
+      });
 socket.on('clear selected', function(){
-  graphic.drawTable(table);
-});
+      graphic.drawTable(table);
+      });
 socket.on('table', function(tbl){
-  table = tbl
-  graphic.drawTable(table);
-});
+      table = tbl
+      graphic.drawTable(table);
+      });
 

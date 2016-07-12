@@ -6,25 +6,25 @@ h1, .panel, p, .modal-header { cursor: default; }  /* Constant cursor */
 
 /* Center the game */
 .vertical-center {
-	/* Fallback for browsers do NOT support vh unit */
-	min-height: 100%;
-	min-height: 100vh;
+   /* Fallback for browsers do NOT support vh unit */
+   min-height: 100%;
+   min-height: 100vh;
 
-	display: flex;
-	align-items: center;
+   display: flex;
+   align-items: center;
 }
 
 /* Toolbar */
 .btn.notclickable, .btn.notclickable:hover, .btn.notclickable:active {
-	background-color: #fff;
-	border-color: rgb(204, 204, 204);
-	cursor: default;
-	box-shadow: none;
+   background-color: #fff;
+   border-color: rgb(204, 204, 204);
+   cursor: default;
+   box-shadow: none;
 }
 
 /* Panels */
 .panel { margin-bottom: 10px; }
 .panel-heading {
-	font-size: 16px;
-	font-weight: 500;
+   font-size: 16px;
+   font-weight: 500;
 }

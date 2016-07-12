@@ -1,31 +1,31 @@
 - levels = ["facile", "intermédière", "difficile", "impossible"]
 
 .panel.panel-primary
-  .panel-body
-    canvas#boardCanvas(width='512', height='512')
-  .panel-footer
-    .btn-toolbar(role='toolbar')
-      .btn-group.btn-group-sm
-        span(class='btn btn-default notclickable')
-          | #{__('turn')}&nbsp;
-          span#turn ?
-          | &nbsp;/&nbsp;
-          span#turnTotal ?
-        span(class='btn btn-default notclickable')
-          | #{__('score')}&nbsp;
-          span#score ?
-      .btn-group.btn-group-sm.pull-right
-        a.btn.btn-warning#reset(href='#', title='New game')
-          span.glyphicon.glyphicon-retweet(aria-hidden="true")
-        .btn-group.btn-group-sm.dropup(role='group')
-          button(type='button', class='btn btn-default dropdown-toggle', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-            | #{__('Level')}&nbsp;
-            span#level= '?'
-          ul.dropdown-menu.dropdown-menu-right
-            - for (var x = 0; x < 4; x++)
-              li: a(href='#', id='level' + (x+1))= __('Level') + ' ' + levels[x]
-      .btn-group.btn-group-sm
-        a.btn.btn-success(href='#', data-toggle='modal', data-target='#howToPlayModal', title='How to play')
-          span.glyphicon.glyphicon-book(aria-hidden='true')
-          | &nbsp; #{__('How to play')}
+   .panel-body
+      canvas#boardCanvas(width='512', height='512')
+   .panel-footer
+      .btn-toolbar(role='toolbar')
+         .btn-group.btn-group-sm
+            span(class='btn btn-default notclickable')
+               | #{__('turn')}&nbsp;
+               span#turn ?
+               | &nbsp;/&nbsp;
+               span#turnTotal ?
+            span(class='btn btn-default notclickable')
+               | #{__('score')}&nbsp;
+               span#score ?
+         .btn-group.btn-group-sm.pull-right
+            a.btn.btn-warning#reset(href='#', title='New game')
+               span.glyphicon.glyphicon-retweet(aria-hidden="true")
+            .btn-group.btn-group-sm.dropup(role='group')
+               button(type='button', class='btn btn-default dropdown-toggle', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                  | #{__('Level')}&nbsp;
+                  span#level= '?'
+               ul.dropdown-menu.dropdown-menu-right
+                  - for (var x = 0; x < 4; x++)
+                     li: a(href='#', id='level' + (x+1))= __('Level') + ' ' + levels[x]
+         .btn-group.btn-group-sm
+            a.btn.btn-success(href='#', data-toggle='modal', data-target='#howToPlayModal', title='How to play')
+               span.glyphicon.glyphicon-book(aria-hidden='true')
+               | &nbsp; #{__('How to play')}
 

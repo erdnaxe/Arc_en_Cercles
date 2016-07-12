@@ -1,4 +1,5 @@
 {
-  "port": 3000,
-  "global_game": true
+   "port": 3000,
+   "global_game": true
 }
+
