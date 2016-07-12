@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -15,94 +13,83 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="favicon.svg"
+   sodipodi:docname="logo.svg"
    inkscape:export-filename="/home/erdnaxe/Desktop/Arc_en_Cercles/tile-wide.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
-  <defs
-     id="defs4" />
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="111.29158"
-     inkscape:cy="51.606337"
-     inkscape:document-units="px"
-     inkscape:current-layer="layer1"
-     showgrid="false"
-     units="px"
-     inkscape:window-width="1461"
-     inkscape:window-height="1016"
-     inkscape:window-x="453"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0" />
-  <metadata
-     id="metadata7">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(0,-872.3622)">
-    <rect
-       style="opacity:1;fill:#151515;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect4139"
-       width="180"
-       height="180"
-       x="0"
-       y="872.36218" />
-    <g
-       id="g4149"
-       transform="matrix(1.1263765,0,0,1.1263765,15.873553,-151.12019)">
+   <defs
+      id="defs4" />
+   <sodipodi:namedview
+      id="base"
+      pagecolor="#ffffff"
+      bordercolor="#666666"
+      borderopacity="1.0"
+      inkscape:pageopacity="0.0"
+      inkscape:pageshadow="2"
+      inkscape:zoom="4"
+      inkscape:cx="132.03624"
+      inkscape:cy="70.944096"
+      inkscape:document-units="px"
+      inkscape:current-layer="layer1"
+      showgrid="false"
+      units="px"
+      inkscape:window-width="1920"
+      inkscape:window-height="1016"
+      inkscape:window-x="0"
+      inkscape:window-y="27"
+      inkscape:window-maximized="1" />
+   <metadata id="metadata7">
+      <rdf:RDF>
+         <cc:Work rdf:about="">
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <dc:title />
+         </cc:Work>
+      </rdf:RDF>
+   </metadata>
+   <g id="layer1">
+      <rect
+          style="opacity:1;fill:#151515;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+          id="rect4139"
+          width="180"
+          height="180"
+          x="0"
+          y="0" />
       <circle
-         r="30.809652"
-         cy="957.55255"
-         cx="65.912453"
+         style="opacity:0.75;fill:#01b2ed;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="path4147"
-         style="opacity:0.75;fill:#01b2ed;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         cx="90"
+         cy="54,8"
+         r="35" />
       <circle
-         r="30.809652"
-         cy="973.64423"
-         cx="92.809654"
+         style="opacity:0.75;fill:#01a986;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="path4147-3"
-         style="opacity:0.75;fill:#01a986;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         cx="120.6"
+         cy="72.5"
+         r="35" />
       <circle
-         r="30.809652"
-         cy="1003.1172"
-         cx="92.809654"
+         style="opacity:0.75;fill:#f6e301;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="path4147-6"
-         style="opacity:0.75;fill:#f6e301;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         cx="120.6"
+         cy="107.4"
+         r="35" />
       <circle
-         r="30.809652"
-         cy="1019.5526"
-         cx="66.164993"
+         style="opacity:0.75;fill:#ec9b03;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="path4147-7"
-         style="opacity:0.75;fill:#ec9b03;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         cx="90"
+         cy="125.2"
+         r="35" />
       <circle
-         r="30.809652"
-         cy="1003.8749"
-         cx="38.809654"
+         style="opacity:0.75;fill:#d40268;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="path4147-5"
-         style="opacity:0.75;fill:#d40268;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         cx="59.4"
+         cy="107.4"
+         r="35" />
       <circle
-         r="30.809652"
-         cy="972.81268"
-         cx="38.809654"
+         style="opacity:0.75;fill:#73067c;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="path4147-35"
-         style="opacity:0.75;fill:#73067c;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    </g>
-  </g>
+         cx="59.4"
+         cy="72.5"
+         r="35" />
+   </g>
 </svg>
