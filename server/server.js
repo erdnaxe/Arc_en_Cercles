@@ -41,18 +41,17 @@ io.on('connection', function(socket){
       console.log('user connected');
 
       if (!config.global_game) {
-      client = new Client(socket);
-      game = new Game(client);
+         client = new Client(socket);
+         game = new Game(client);
       } else {
-      // Send game status
-      client.sendInfos();
+         client.sendInfos();  // Send game status
       }
 
       socket.on('reset', function(){
             game.reset();
             });
       socket.on('click', function(coord){
-            game.mouseClick(coord);
+            game.click(coord);
             });
       socket.on('level', function(i){
             game.level = i;

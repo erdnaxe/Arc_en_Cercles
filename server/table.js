@@ -4,16 +4,11 @@
 var Pair = require('./pair.js');
 
 module.exports = function Table() {
-   // The board
-   this.table = [];
+   this.table = [];  // The board
+   this.pair = new Pair();  // Selection
+   this.amount_colors = 4;  // Number of colors
 
-   // Number of colors
-   amount_colors_max = 8;  // Number of colors
-   amount_colors = 4;
-
-   this.pair = new Pair();
-
-   this.reset = function(pos) {
+   this.reset = function() {
       // Clear selection
       this.pair.clear();
 
@@ -22,39 +17,14 @@ module.exports = function Table() {
       this.test();
    }
 
-   this.setAmountColors = function(n) {
-      // Change the amount of colors in the next game
-      if (n > 1 && n <= amount_colors_max) {
-         amount_colors = n;
-      }
-   }
-
-   this.getCircle = function(pos) {
-      // Return the integer witch identify the color of the cas at pos
-      return this.table[pos[0]][pos[1]];
-   }
-
-   this.setCircle = function(pos, color) {
-      // Set the color of a circle at pos with color.
-      this.table[pos[0]][pos[1]] = color;
-   };
-
-   this.removeCircle = function(pos) {
-      // Set the color to 0 at pos
-      this.table[pos[0]][pos[1]] =  0;
-
-      // Draw the circle
-      //graphic.drawCircle(pos, false, 0);
-   };
-
    this.populateTable = function() {
       // For each case of the table do
       for (var i=0; i<16; i++) {
          this.table[i] = [];
          for (var j=0; j<16; j++) {
             // Draw a color between 1 and amount_colors and set the circle color
-            var ent = Math.floor((Math.random() * amount_colors) + 1);
-            this.setCircle([i, j], ent);
+            ent = Math.floor((Math.random() * this.amount_colors) + 1);
+            this.table[i][j] = ent;
          }
       }
    }
@@ -68,18 +38,18 @@ module.exports = function Table() {
 
          // For each case of the table do
          var ref = null;
-         for (var i=0; i<16; i++) {
-            for (var j=0; j<16; j++) {
-               ref = this.getCircle([i, j]);
+         for (i=0; i<16; i++) {
+            for (j=0; j<16; j++) {
+               ref = this.table[i][j];
 
                if (ref != 0) {  // If it's not already destroyed
-                  for (var k=1; i+k<16 && this.getCircle([i+k, j]) == ref; k++) {
-                     this.removeCircle([i+k, j]);
+                  for (k=1; i+k<16 && this.table[i+k][j] == ref; k++) {
+                     this.table[i+k][j] = 0;
                      points_get ++;
                   }
 
-                  for (var m=1; j+m<16 && this.getCircle([i, j+m]) == ref; m++) {
-                     this.removeCircle([i, j+m]);
+                  for (m=1; j+m<16 && this.table[i][j+m] == ref; m++) {
+                     this.table[i][j+m] = 0;
                      points_get ++;
                   }
                }
@@ -87,14 +57,12 @@ module.exports = function Table() {
          }
 
          // Regerate
-         for (var i=0; i<16; i++) {
-            for (var j=15; j>=0; j--) {
-               if(this.getCircle([i, j]) == 0) {
-                  // Draw a color between 1 and amount_colors
-                  var ent = Math.floor((Math.random() * amount_colors) + 1);
-
-                  // Set the circle
-                  this.setCircle([i, j], ent);
+         for (i=0; i<16; i++) {
+            for (j=15; j>=0; j--) {
+               if(this.table[i][j] == 0) {
+                  // Draw a color between 1 and amount_colors and set the circle color
+                  ent = Math.floor((Math.random() * this.amount_colors) + 1);
+                  this.table[i][j] = ent;
                }
             }
          }
@@ -107,18 +75,23 @@ module.exports = function Table() {
    }
 
    this.algo = function() {
+      getCircle = function(pos) {
+         return this.table[pos[0]][pos[1]];
+      }
+
       points_gained = 0;
 
       // Save in memory then erase selection
-      var circle_1 = this.pair.selected_1;
-      var circle_2 = this.pair.selected_2;
+      circle_1 = this.pair.selected_1;
+      circle_2 = this.pair.selected_2;
       this.pair.clear();
 
       // Check if it isn't the same color
-      if (this.getCircle(circle_1) != this.getCircle(circle_2)) {
-         var color_1 = this.getCircle(circle_1);
-         this.setCircle(circle_1, this.getCircle(circle_2));
-         this.setCircle(circle_2, color_1);
+      color_1 = this.table[circle_1[0]][circle_1[1]];
+      color_2 = this.table[circle_2[0]][circle_2[1]];
+      if (color_1 != color_2) {
+         this.table[circle_1[0]][circle_1[1]] = color_2;
+         this.table[circle_2[0]][circle_2[1]] = color_1;
 
          // Execute algo
          points_gained += this.test();

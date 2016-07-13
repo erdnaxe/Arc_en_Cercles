@@ -16,19 +16,9 @@ module.exports = function Infos(socket) {
       socket.emit('turn', this.turn);
    }
 
-   this.setTurnTotal = function(i) {
-      this.turnTotal = i;
-      socket.emit('turn total', this.turnTotal);
-   }
-
    this.setScore = function(i) {
       this.score = i;
       socket.emit('score', this.score);
-   }
-
-   this.setLevel = function(i) {
-      this.level = i;
-      socket.emit('level', this.level);
    }
 
    this.setTable = function(tbl) {
