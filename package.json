@@ -1,6 +1,6 @@
 {
   "name": "Arc_en_Cercles",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Game about making combinations.",
   "main": "server/server.js",
   "scripts": {
