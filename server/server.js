@@ -6,10 +6,9 @@ var io = require('socket.io')(http);
 var levelup = require('levelup');
 var config = require('./config.json');
 var Game = require('./game.js');
-var Client = require('./client.js');
 
 // Load database
-var db = levelup('./data')
+var db = levelup('./data');
 
 // Load locales
 i18n.configure({ directory: './locales' });
@@ -27,24 +26,22 @@ app.use(function(req, res, next) {
       });
 var serverPort = process.env.PORT || config.port;
 http.listen(serverPort, function() {
-      console.log("Server is listening on port " + serverPort + ', web client on http://localhost:' + serverPort + '/');
+      console.log("[Server] Listening on port " + serverPort + ', web client on http://localhost:' + serverPort + '/');
       });
 
 // If global game then init game before socket
 if (config.global_game) {
-   client = new Client(io);
-   game = new Game(client);
+   game = new Game(io);
 }
 
 // Load socket
 io.on('connection', function(socket){
-      console.log('user connected');
+      console.log('[Server] User connected');
 
       if (!config.global_game) {
-         client = new Client(socket);
-         game = new Game(client);
+         game = new Game(socket);
       } else {
-         client.sendInfos();  // Send game status
+         game.sendInfos();
       }
 
       socket.on('reset', function(){
@@ -58,7 +55,7 @@ io.on('connection', function(socket){
             game.reset();
             });
       socket.on('disconnect', function(){
-            console.log('user disconnected');
+            console.log('[Server] User disconnected');
             });
 });
 

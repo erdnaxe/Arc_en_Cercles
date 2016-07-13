@@ -3,17 +3,19 @@
  */
 var Table = require('./table.js');
 
-module.exports = function Game(cli) {
+module.exports = function Game(socket) {
+   socket = socket;
+
    this.turn = 1;
-   this.turn_max = 20; 
-   this.level = 1;
+   this.turnTotal = 20; 
    this.score = 0;
+   this.level = 1;
    this.table = new Table();
-   this.client = cli;
 
+   /**
+    * Reset everything
+    */
    this.reset = function() {
-      console.log('reset the grid');
-
       // Reset turn & score
       this.turn = 1;
       this.score = 0;
@@ -22,33 +24,52 @@ module.exports = function Game(cli) {
       this.table.amount_colors = 4 + this.level;
       this.table.reset();
 
-      // Send everything
-      this.client.turn = this.turn;
-      this.client.turnTotal = this.turn_max;
-      this.client.score = this.score;
-      this.client.level = this.level;
-      this.client.table = this.table.table;
-      this.client.sendInfos();
+      // Update client
+      this.sendInfos();
    }
 
+   this.sendInfos = function() {
+      socket.emit('turn', this.turn);
+      socket.emit('turn total', this.turnTotal);
+      socket.emit('score', this.score);
+      socket.emit('level', this.level);
+      socket.emit('table', this.table.table);
+      socket.emit('selected', this.table.selected);
+
+      console.log('[Game][sendInfos] Client refreshed');
+   }
+
+   /**
+    * Select the clicked circle
+    * Called on a click
+    */
    this.click = function(pos) {
       // If can select then select and inform the client
-      if (this.table.pair.select(pos)) {
-         this.client.setSelected(pos);
+      if (this.table.select(pos)) {
+         socket.emit('selected', this.table.selected);
       }
 
-      if (this.table.pair.areTwoSelected()) {
-         this.score += this.table.algo();
-         this.turn ++;
+      // Play with the new selection
+      this.play();
+   }
 
-         // Check if it's the end
-         if (this.turn > this.turn_max) {
-            this.reset();
-         } else {
-            this.client.setScore(this.score);
-            this.client.setTurn(this.turn);
-            this.client.setTable(this.table.table);
-         }
+   /**
+    * Play with the selection
+    */
+   this.play = function() {
+      // If can play then play
+      if (this.table.selected.length == 2) {
+         this.score += this.table.playFromSelection();
+         this.turn += 1;
+
+         // Update client
+         this.sendInfos();
+      }
+
+      // If it's the end then reset
+      if (this.turn > this.turn_max) {
+         // TODO Ask for reset
+         this.reset();
       }
    }
 

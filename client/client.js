@@ -1,6 +1,12 @@
 var socket = require('socket.io-client')('http://localhost:3000');
 var readline = require('readline');
 
+// Vars
+turn = 0;
+turn_total = 0;
+score = 0;
+table = [];
+
 // Load prompt
 var rl = readline.createInterface({
 input: process.stdin,

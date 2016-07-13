@@ -42,10 +42,9 @@ socket.on('level', function(i){
       $('#level').text(i);
       });
 socket.on('selected', function(selected){
-      graphic.drawCircle(selected, true, table[selected[0]][selected[1]]);
-      });
-socket.on('clear selected', function(){
-      graphic.drawTable(table);
+      selected.forEach(function(pos) {
+            graphic.drawCircle(pos, true, table[pos[0]][pos[1]]);
+            });
       });
 socket.on('table', function(tbl){
       table = tbl
