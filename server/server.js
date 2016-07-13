@@ -54,6 +54,10 @@ io.on('connection', function(socket){
             game.level = i;
             game.reset();
             });
+      socket.on('table size', function(i){
+            game.table.table_size = i;
+            game.reset();
+            });
       socket.on('disconnect', function(){
             console.log('[Server] User disconnected');
             });

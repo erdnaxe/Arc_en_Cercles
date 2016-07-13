@@ -3,6 +3,8 @@
  */
 function Graphic () {
    this.canvas = document.getElementById("boardCanvas");
+   this.table_size = 22;
+
    var context = this.canvas.getContext("2d");
 
    var getColor = function(i) {
@@ -22,15 +24,15 @@ function Graphic () {
    this.drawCircle = function(pos, selected, ref) {
       var color = getColor(ref);
 
-      x = 32*pos[0];
-      y = 32*pos[1];
+      x = (512/this.table_size)*pos[0];
+      y = (512/this.table_size)*pos[1];
 
       // Clean up
-      context.clearRect (x , y, 32, 32);
+      context.clearRect (x , y, (512/this.table_size), (512/this.table_size));
 
       // Draw a circle
       context.beginPath();
-      context.arc(16+x, 16+y, 14, 0, 2*Math.PI);
+      context.arc((256/this.table_size)+x, (256/this.table_size)+y, (256/this.table_size)-2, 0, 2*Math.PI);
       context.fillStyle = color;
       context.fill();
       context.lineWidth = 2;
@@ -44,8 +46,8 @@ function Graphic () {
 
    this.drawTable = function(table) {
       // For each case of the table do
-      for (var i=0; i<16; i++) {
-         for (var j=0; j<16; j++) {
+      for (var i=0; i<this.table_size; i++) {
+         for (var j=0; j<this.table_size; j++) {
             // Draw a color between 1 and amount_colors and set the circle color
             this.drawCircle([i, j], false, table[i][j]);
          }

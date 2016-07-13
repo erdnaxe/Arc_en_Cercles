@@ -33,6 +33,7 @@ module.exports = function Game(socket) {
       socket.emit('turn total', this.turnTotal);
       socket.emit('score', this.score);
       socket.emit('level', this.level);
+      socket.emit('table size', this.table.table_size);
       socket.emit('table', this.table.table);
       socket.emit('selected', this.table.selected);
 
