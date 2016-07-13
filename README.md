@@ -1,4 +1,5 @@
 # Arc en Cercles
+[![NPM Version][npm-image]][npm-url]
 
 Arc en Cercles is a Open-Source game. It uses a server with **NodeJS** and a web browser as a client.
 
@@ -56,4 +57,7 @@ The coordinates are between *0* and *15* for a grid size of *16*.
 
 * **NodeJS game** by [Alexandre IOOSS](https://github.com/erdnaxe)
 * **Original game** created by a group for a baccalaureate project (ISN).
+
+[npm-image]: https://img.shields.io/npm/v/Arc_en_Cercles.svg
+[npm-url]: https://npmjs.org/package/Arc_en_Cercles
 
