@@ -11,7 +11,16 @@ Actually, the game is playable but a lot of things is happening in back-end to i
 * Server side algorithm: no cheating and scoreboard management,
 * Different level of difficulty (with more colours),
 * Can play game globally (on all client at the same time) or not,
-* API to let AI or bots play the game.
+* API to let AI or bots play the game,
+* Responsive web client: you can even play this on a e-ink tablet!
+
+## Planned features
+
+* Scoreboard with Google's **LevelDB** database,
+* Shapes on client side (fed of circles),
+* Better algorithm implementation,
+* Switch client to **Bootstrap 4** when Twitter will be releasing it,
+* Implement client on **Apache Cordova** to make a **iOS** and **Android** nativ app.
 
 And much more coming!
 
