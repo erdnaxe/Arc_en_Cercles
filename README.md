@@ -10,9 +10,10 @@ Actually, the game is playable but a lot of things is happening in back-end to i
 
 * Server side algorithm: no cheating and scoreboard management,
 * Different level of difficulty (with more colours),
-* Can play game globally (on all client at the same time) or not.
+* Can play game globally (on all client at the same time) or not,
+* API to let AI or bots play the game.
 
-And much more!
+And much more coming!
 
 ## How to build and host a server
 
